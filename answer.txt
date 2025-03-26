@@ -1,0 +1,21 @@
+Question: 
+If you create a constructor method to build a DVD by title then create a constructor method to build 
+a DVD by category. Does JAVA allow you to do this?
+Answer:
+In Java, method overloading allows different methods to have the same name but different signatures where signature can differ by number of input parameters or type of input parameter(s) or both.
+But the title and the category are both String type and the number of input is both 1, so the answer is no, Java doesn't allow to do this.
+
+Question: Is JAVA a Pass by Value or a Pass by Reference programming language?
+Answer: JAVA is always a pass by value programming language.
+
+Question: 
+After the call of swap(jungleDVD, cinderellaDVD) why does the title of these two 
+objects still remain?
+Answer:
+After calling swap(jungleDVD, cinderellaDVD), the titles remain the same because Java passes objects by reference value. The swap method only swaps the local references o1 and o2, but it does not affect the actual objects outside the method.
+
+Question:
+After the call of changeTitle(jungleDVD, cinderellaDVD.getTitle()) why is 
+the title of the JungleDVD changed?
+Answer: 
+After calling changeTitle(jungleDVD, cinderellaDVD.getTitle()), the title of jungleDVD is changed because the method modifies the actual object using dvd.setTitle(title). The later assignment dvd = new DigitalVideoDisc(oldTitle); only affects the local reference dvd, not the original jungleDVD reference in main().
