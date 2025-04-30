@@ -1,0 +1,3 @@
+Container: AWT dùng Frame, Panel; Swing mở rộng thành JFrame, JPanel với nhiều tính năng.
+Tên lớp: Swing có tiền tố "J" (ví dụ JButton), còn AWT thì không (Button).
+Xử lý sự kiện: Swing tối ưu hơn, độc lập với nền tảng, trong khi AWT phụ thuộc hệ điều hành.
