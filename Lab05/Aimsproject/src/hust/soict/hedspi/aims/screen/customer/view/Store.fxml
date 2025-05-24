@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" prefHeight="768.0" prefWidth="1024.0"
+      xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="hust.soict.hedspi.aims.screen.customer.controller.ViewStoreController">
+    
+    <!-- Padding nếu cần thiết, để cân lề -->
+    <padding>
+        <Insets top="10.0" left="20.0" right="20.0" bottom="10.0"/>
+    </padding>
+
+    <children>
+        <!-- Header -->
+        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="1024.0" spacing="20.0">
+            <children>
+                <Button fx:id="btnViewCart" mnemonicParsing="false" onAction="#btnViewCartPressed"
+                        prefHeight="50.0" prefWidth="120.0" text="View Cart"/>
+                <Label text="AIMS Store" textFill="#004cff">
+                    <font>
+                        <Font size="50.0"/>
+                    </font>
+                </Label>
+                <Region HBox.hgrow="ALWAYS"/>
+            </children>
+        </HBox>
+
+        <!-- Danh sách sản phẩm -->
+        <ScrollPane prefHeight="660.0" prefWidth="1024.0" VBox.vgrow="ALWAYS">
+            <content>
+                <GridPane fx:id="gridPane" hgap="20" vgap="20" alignment="CENTER">
+                    <columnConstraints>
+                        <ColumnConstraints minWidth="300.0" prefWidth="300.0" hgrow="SOMETIMES"/>
+                        <ColumnConstraints minWidth="300.0" prefWidth="300.0" hgrow="SOMETIMES"/>
+                        <ColumnConstraints minWidth="300.0" prefWidth="300.0" hgrow="SOMETIMES"/>
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="150.0" prefHeight="150.0" vgrow="SOMETIMES"/>
+                    </rowConstraints>
+                </GridPane>
+            </content>
+        </ScrollPane>
+    </children>
+</VBox>
